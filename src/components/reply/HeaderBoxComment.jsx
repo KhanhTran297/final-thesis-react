@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { Dropdown, Space } from "antd";
 import { MoreOutlined } from "@ant-design/icons";
-import DeleteComment from "../Modal/DeleteComment";
-import Report from "../Modal/Report";
-import EditComment from "../Modal/EditComment";
+import DeleteComment from "../modal/DeleteComment";
+import Report from "../modal/Report";
+import EditComment from "../modal/EditComment";
 const HeaderBoxComment = (props) => {
   const { permission, id, email, content } = props;
   const selectorAccount = useSelector((state) => state.account);

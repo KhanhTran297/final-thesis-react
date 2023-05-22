@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import useAccount from "@/hook/useAccount";
 import useCookie from "@/hook/useCookie";
-import CreatePostDetail from "../Modal/CreatePostDetail";
+import CreatePostDetail from "../modal/CreatePostDetail";
 
 const CreatePost = (props) => {
   const [showCreatePost, setShowCreatePost] = useState(false);

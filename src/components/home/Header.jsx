@@ -13,10 +13,10 @@ const Header = () => {
   const { getProfileAccount } = useAccount();
   const selector = useSelector((state) => state.account);
   const navigate = useNavigate();
-  const {show,setShow,nodeRef} = useClickOutSide();
+  const { show, setShow, nodeRef } = useClickOutSide();
   //variable
   const userAccount = selector.account;
-  
+
   useEffect(() => {
     //Neu co token trong cookie
     if (isLoggedIn()) {

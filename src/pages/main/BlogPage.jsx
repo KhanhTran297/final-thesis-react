@@ -1,4 +1,4 @@
-import Header from "@/components/Home/Header";
+import Header from "@/components/home/Header";
 import Blog from "@/components/blog/Blog";
 import React from "react";
 
