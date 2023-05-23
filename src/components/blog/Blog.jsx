@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import useAccount from "@/hook/useAccount";
 import usePost from "@/hook/usePost";
-import CreatePost from "../Forum/CreatePost";
+import CreatePost from "../forum/CreatePost";
 import Post from "../post/Post";
 import LeftSideBlog from "./LeftSideBlog";
 import RightSideBlog from "./RightSideBlog";
-
 
 const Blog = () => {
   //hooks
@@ -17,11 +16,11 @@ const Blog = () => {
   //variables
   const userAccount = selectorAccount.account;
   const listPost = selectorPost.listPost;
- 
+
   useEffect(() => {
     getListPost();
     getProfileAccount();
-  }, [listPost,userAccount]);
+  }, [listPost, userAccount]);
   return (
     <div className="grid grid-cols-[20%_60%_20%]">
       <LeftSideBlog className="fixed"></LeftSideBlog>
@@ -33,7 +32,7 @@ const Blog = () => {
             </span>
           </div>
         </div>
-        <CreatePost 
+        <CreatePost
           avatar={userAccount?.userAvatar}
           fullname={userAccount?.userFullName}
         ></CreatePost>
@@ -45,7 +44,6 @@ const Blog = () => {
               content={post.contentPost}
               usernameAccountPost={post.accountPost.fullName}
               avatarAccountPost={post.accountPost.avatarPath}
-              
             />
           ))}
         </div>

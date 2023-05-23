@@ -27,13 +27,13 @@ export default function init(routes) {
         path: "profile",
         element: (
           <GuardRoute>
-            <ProfilePage/>
+            <ProfilePage />
           </GuardRoute>
         ),
       },
       {
         path: "forum",
-        element: <ForumPage/>,
+        element: <ForumPage />,
       },
       {
         path: "personal",
@@ -53,11 +53,7 @@ export default function init(routes) {
       },
       {
         path: "post/:postId",
-        element: (
-          
-          <PostDetailPage />
-          
-        ),
+        element: <PostDetailPage />,
       },
     ],
   };

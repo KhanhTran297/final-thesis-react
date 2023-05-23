@@ -1,5 +1,5 @@
-import Header from "@/components/Home/Header";
-import Home from "@/components/Home/Home";
+import Header from "@/components/home/Header";
+import Home from "@/components/home/Home";
 import useAccount from "@/hook/useAccount";
 import useCookie from "@/hook/useCookie";
 import React, { useEffect } from "react";
@@ -22,8 +22,8 @@ const HomePage = () => {
 
   return (
     <div className="">
-      <Header/>
-      <Home/>
+      <Header />
+      <Home />
     </div>
   );
 };

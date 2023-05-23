@@ -1,12 +1,12 @@
-import Forum from "@/components/Forum/Forum";
-import Header from "@/components/Home/Header";
+import Forum from "@/components/forum/Forum";
+import Header from "@/components/home/Header";
 import React from "react";
 
 const ForumPage = () => {
   return (
     <div className="">
-      <Header/>
-      <Forum/>
+      <Header />
+      <Forum />
     </div>
   );
 };

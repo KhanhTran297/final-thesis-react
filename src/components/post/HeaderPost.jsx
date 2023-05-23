@@ -1,16 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Modal } from 'antd';
-import {
-  BookOutlined,
-  BookFilled
-} from '@ant-design/icons';
+import { Modal } from "antd";
+import { BookOutlined, BookFilled } from "@ant-design/icons";
 import useAccount from "@/hook/useAccount";
 import useCookie from "@/hook/useCookie";
 import useClickOutSide from "@/hook/useClickOutSide";
-import CreatePostDetail from "../Modal/CreatePostDetail";
-import Report from "../Modal/Report";
+import CreatePostDetail from "../modal/CreatePostDetail";
+import Report from "../modal/Report";
 import useBookmark from "@/hook/useBookmark";
 
 const HeaderPost = (props) => {
@@ -25,9 +22,8 @@ const HeaderPost = (props) => {
   const { isLoggedIn } = useCookie();
   const { getProfileAccount } = useAccount();
   const navigate = useNavigate();
-  const {  setParams } = useBookmark();
+  const { setParams } = useBookmark();
 
-  
   //methods
   const checkAccount = () => {
     if (isLoggedIn()) {
@@ -50,14 +46,11 @@ const HeaderPost = (props) => {
   };
 
   useEffect(() => {
-
     if (userAccount.id) {
       setParams(userAccount.id);
     }
-
   }, [listBookmark, props.isBookmarked]);
 
-  
   return (
     <Fragment>
       <div className="relative z-0">
@@ -148,13 +141,21 @@ const HeaderPost = (props) => {
                 >
                   Report
                 </button>
-                <button className="w-full h-8  border border-t-1 border-solid cursor-pointer text-left pl-1 pr-1 flex "
-                  onClick={ props.isBookmarked ? props.onDeleteBookmark : props.onBookmark }
+                <button
+                  className="w-full h-8  border border-t-1 border-solid cursor-pointer text-left pl-1 pr-1 flex "
+                  onClick={
+                    props.isBookmarked
+                      ? props.onDeleteBookmark
+                      : props.onBookmark
+                  }
                 >
                   <span className="flex">
-                    {props.isBookmarked ?  <BookFilled className="pt-1"/> : <BookOutlined className="pt-1"/> }
+                    {props.isBookmarked ? (
+                      <BookFilled className="pt-1" />
+                    ) : (
+                      <BookOutlined className="pt-1" />
+                    )}
                     <span>Bookmark</span>
-
                   </span>
                 </button>
               </div>
